@@ -1,18 +1,56 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="msenu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title><img alt="logo" height="70" src="assets/images/horizontal-logo.png" style='margin-top: 5px !important'></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+      <ion-grid>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-computer.png" menuToggle (click)='myApp.openPortalNav(true)'></ion-img>
+            <p class='caption-icon'>Portal</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-calendar.png" menuToggle></ion-img>
+            <p class='caption-icon'>Agendamento</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-loupe.png" (click)='goToSearch();'></ion-img>
+            <p class='caption-icon'>Pesquisa CPF/CNPJ</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-sketch.png" menuToggle></ion-img>
+            <p class='caption-icon'>Assistência Técnica</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-qr-code.png" menuToggle></ion-img>
+            <p class='caption-icon'>Leitor QR</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-signing.png" menuToggle></ion-img>
+            <p class='caption-icon'>Requerimento</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-4>
+          <ion-img width="50" height="50" src="assets/images/icon-house.png" menuToggle (click)='myApp.openHabitationNav(true)'></ion-img>
+          <p class='caption-icon'>Notícias</p>
+        </ion-col>
+        <ion-col col-4>
+          <ion-img width="50" height="50" src="assets/images/icon-certified.png" menuToggle (click)='myApp.openRegularizationNav(true)'></ion-img>
+          <p class='caption-icon'>Info</p>
+        </ion-col>
+        <ion-col col-4>
+          <ion-img width="50" height="50" src="assets/images/icon-networking.png" menuToggle (click)='myApp.openEntityNav(true)'></ion-img>
+          <p class='caption-icon'>Login</p>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
 </ion-content>
